@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1><%= title %></h1>
+    </div>
+
+    <div class="box">
+        <%for (let i = 0; i < listItems.length; i++) {%>
+            <div class="item">
+                <input type="checkbox">
+                <p class="p-element"><%= listItems[i] %></p>
+            </div>
+        <%}%>
+
+        <form class="item" action="/" method="post">
+            <input type="text" name="todo" placeholder="New Item" autocomplete="off" required>
+            <button type="submit" name="button" value="<%= title %>">+</button>
+        </form>
+    </div>
+
+
+    <footer>
+        <p class="p-footer">© Copyright Anas Ajaanan.</p>
+    </footer>
+
+</body>
+</html>
